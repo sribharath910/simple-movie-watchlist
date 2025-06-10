@@ -1,0 +1,229 @@
+/* Reset default margin and padding */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000; /* Optional: Set your desired background */
+}
+
+/* Make your main app container take full width */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #111; /* Example dark theme */
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body.light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container.light {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.light .movieCard {
+  background-color: #ffffff;
+}
+
+.light .input {
+  background: white;
+  color: black;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #000000;
+  color: #f1f1f1;
+}
+
+.container.dark {
+  background-color: #000000;
+  color: #f1f1f1;
+}
+
+.dark .input {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #333;
+}
+
+.dark .movieCard {
+  background-color: #1e1e1e;
+}
+
+/* Shared container styles */
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Header section */
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Form section */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+}
+
+.addButton {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.themeToggle {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.themeToggle:hover {
+  background-color: #0056b3;
+}
+
+/* Movie List */
+.movieList {
+  list-style: none;
+  padding: 0;
+}
+
+.movieCard {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: box-shadow 0.2s;
+}
+
+.movieCard:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.movieInfo {
+  flex: 1 1 60%;
+  min-width: 150px;
+}
+
+.title {
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+/* Buttons */
+.button {
+  margin-right: 5px;
+  padding: 6px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.deleteButton {
+  padding: 6px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .header {
+    font-size: 1.6rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .addButton,
+  .input,
+  .themeToggle {
+    width: 100%;
+  }
+
+  .movieCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .movieInfo {
+    flex: 1 1 100%;
+  }
+
+  .button,
+  .deleteButton {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
